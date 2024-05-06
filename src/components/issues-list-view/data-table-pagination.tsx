@@ -25,7 +25,7 @@ export function DataTablePagination<TData>({
   const { issueCount } = useProjectContext();
 
   return (
-    <div className="flex items-center justify-between px-2">
+    <div className="flex items-center justify-between">
       <div className="flex-1 text-sm text-muted-foreground">
         {issueCount &&
           (issueCount === 1
@@ -35,7 +35,7 @@ export function DataTablePagination<TData>({
               } of ${issueCount} rows visible.`)}
       </div>
       <div className="flex items-center space-x-6 text-foreground lg:space-x-8">
-        <div className="flex items-center space-x-2">
+        <div className="hidden items-center space-x-2 sm:flex">
           <p className="text-sm font-medium">Rows per page</p>
           <Select
             value={`${table.getState().pagination.pageSize}`}

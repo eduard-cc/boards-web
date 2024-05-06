@@ -7,6 +7,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import taskSvg from "@/assets/task.svg";
 import bugSvg from "@/assets/bug.svg";
 import epicSvg from "@/assets/epic.svg";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 const issueTypeToSvg = {
   task: taskSvg,
@@ -138,16 +139,19 @@ export default function HomePageBoard({ issues }: { issues: Issue[] }) {
   }
 
   return (
-    <DragDropContext onDragEnd={handleDragEnd}>
-      <div className="flex justify-between text-foreground">
-        <KanbanColumn issues={toDoIssues} columnId="toDo" title="To Do" />
-        <KanbanColumn
-          issues={inProgressIssues}
-          columnId="inProgress"
-          title="In Progress"
-        />
-        <KanbanColumn issues={doneIssues} columnId="done" title="Done" />
-      </div>
-    </DragDropContext>
+    <ScrollArea type="scroll">
+      <DragDropContext onDragEnd={handleDragEnd}>
+        <div className="flex justify-between gap-4 text-foreground">
+          <KanbanColumn issues={toDoIssues} columnId="toDo" title="To Do" />
+          <KanbanColumn
+            issues={inProgressIssues}
+            columnId="inProgress"
+            title="In Progress"
+          />
+          <KanbanColumn issues={doneIssues} columnId="done" title="Done" />
+        </div>
+      </DragDropContext>
+      <ScrollBar orientation="horizontal" />
+    </ScrollArea>
   );
 }

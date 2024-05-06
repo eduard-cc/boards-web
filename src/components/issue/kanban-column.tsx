@@ -58,7 +58,7 @@ export default function KanbanColumn({
         BORDER_COLORS[columnId as keyof typeof BORDER_COLORS],
       )}
     >
-      <div className="mb-4 mt-2 flex w-full items-center justify-between gap-2 font-semibold tracking-wide">
+      <div className="mb-2 mt-0 flex w-full items-center justify-between gap-2 font-semibold tracking-wide sm:mb-4 sm:mt-2">
         <div className="flex items-center gap-2">
           <span className="ml-4">{title}</span>
           <Badge variant="secondary">{issues.length}</Badge>

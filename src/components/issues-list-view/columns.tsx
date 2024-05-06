@@ -36,10 +36,10 @@ export const columns: ColumnDef<Issue>[] = [
           {row.getValue("type") === "TASK"
             ? "Task"
             : row.getValue("type") === "BUG"
-            ? "Bug"
-            : row.getValue("type") === "EPIC"
-            ? "Epic"
-            : null}
+              ? "Bug"
+              : row.getValue("type") === "EPIC"
+                ? "Epic"
+                : null}
         </span>
       </div>
     ),

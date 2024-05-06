@@ -4,7 +4,7 @@ import Logo from "/logo.svg";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col items-center py-10">
+    <div className="flex flex-col items-center py-5 md:py-10">
       <Button asChild variant="ghost" className="mb-2 w-fit">
         <Link
           to="/"

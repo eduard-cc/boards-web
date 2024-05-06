@@ -23,7 +23,7 @@ export function DataTableViewOptions<TData>({
         <Button
           variant="outline"
           size="sm"
-          className="ml-auto hidden h-8 text-foreground lg:flex"
+          className="ml-auto hidden h-8 text-foreground md:flex"
         >
           <MixerHorizontalIcon className="mr-2 h-4 w-4" />
           View
@@ -49,10 +49,10 @@ export function DataTableViewOptions<TData>({
                 {column.id == "dueOn"
                   ? "Due on"
                   : column.id == "createdBy"
-                  ? "Created by"
-                  : column.id == "createdOn"
-                  ? "Created on"
-                  : column.id}
+                    ? "Created by"
+                    : column.id == "createdOn"
+                      ? "Created on"
+                      : column.id}
               </DropdownMenuCheckboxItem>
             );
           })}

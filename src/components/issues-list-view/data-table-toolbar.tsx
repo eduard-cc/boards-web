@@ -27,14 +27,14 @@ export function DataTableToolbar<TData>({
 
   return (
     <div className="flex items-center justify-between">
-      <div className="flex flex-1 items-center space-x-2">
+      <div className="-mx-2 flex flex-1 items-center space-x-2 md:mx-0">
         <Input
           placeholder="Filter issues by title..."
           value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
             table.getColumn("title")?.setFilterValue(event.target.value)
           }
-          className="h-8 w-[250px] text-foreground"
+          className="hidden h-8 w-[250px] text-foreground md:flex"
           type="search"
         />
         {table.getColumn("type") && (

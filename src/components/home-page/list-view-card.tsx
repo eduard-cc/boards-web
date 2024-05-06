@@ -38,8 +38,8 @@ export default function ListViewCard({ displayed }: { displayed: boolean }) {
                     colIndex === 0
                       ? "w-1/6"
                       : colIndex === 1
-                      ? "w-1/3"
-                      : "w-1/4"
+                        ? "w-1/3"
+                        : "w-1/4"
                   }`}
                 >
                   <div

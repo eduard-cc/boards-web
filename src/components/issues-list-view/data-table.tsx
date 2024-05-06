@@ -72,10 +72,10 @@ export function DataTable<TData, TValue>({
 
   return (
     <>
-      <div className="space-y-4">
+      <div className="space-y-2 sm:space-y-4">
         <DataTableToolbar table={table} homePage={homePage} />
         <div className="rounded-md border border-border">
-          <Table>
+          <Table className="text-xs sm:text-sm">
             <TableHeader>
               {table.getHeaderGroups().map((headerGroup) => (
                 <TableRow key={headerGroup.id} className="hover:bg-inherit">

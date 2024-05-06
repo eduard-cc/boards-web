@@ -23,7 +23,7 @@ export default function LoginPage() {
           <ThemeToggle />
         </div>
       </div>
-      <div className="flex h-screen">
+      <div className="mx-4 flex h-screen">
         <div className="mx-auto flex w-full flex-col justify-center space-y-5 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
             <h1 className="text-2xl font-semibold tracking-tight text-foreground">
